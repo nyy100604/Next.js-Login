@@ -24,7 +24,7 @@ interface User {
 
 const getUserByEmail = async (email: string): Promise<User | null> => {
   // similate get a teacherdata from database
-  if (email === "nyy100604@gmail.com") {
+  if (email === "") {
     return { id: 1, email, role: "teacher" };
   }
   throw new Error("");
@@ -32,7 +32,7 @@ const getUserByEmail = async (email: string): Promise<User | null> => {
 
 const getUserByAddress = async (address: string): Promise<User | null> => {
   // similate get a addressdata from database
-  if (address === "0x54d160a7AeC0bAdDa0CF718b9989Dfff5f6f6f8C") {
+  if (address ==="") {
     return { id: 2, address, role: "issuer" };
   }
   throw new Error("");
