@@ -43,7 +43,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 import { handlers } from "@/auth" // Referring to the auth.ts we just created
 export const { GET, POST } = handlers
 ```
+5.The login configuration logic refers to the ./auth.ts
 
+6.Protecting Resources main logic in ./middleware.ts
 
 
 
