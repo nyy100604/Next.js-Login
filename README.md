@@ -22,6 +22,27 @@ Project refer to https://authjs.dev/.
 // 首先，確保已安裝 NextAuth.js 和 ethers packages：
 npm install next-auth@beta ethers
 ```
+2.配置環境變數AUTH_SECRET以及JWT_SECRET
+```bash
+// 生成AUTH_SECRET
+npx auth secret
+//.env
+AUTH_SECRET=
+JWT_SECRET=
+```
+3.Start by creating a new auth.ts file at the root of your app with the following content.
+```bash
+import NextAuth from "next-auth"
+ 
+export const { handlers, signIn, signOut, auth } = NextAuth({
+  providers: [],
+})
+```
+4.Add an Route Handler under /app/api/auth/[...nextauth]/route.ts.
+```bash
+import { handlers } from "@/auth" // Referring to the auth.ts we just created
+export const { GET, POST } = handlers
+```
 
 
 
